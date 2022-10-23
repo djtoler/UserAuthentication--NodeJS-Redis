@@ -1,1 +1,1 @@
-::marker  UserAuthInfrastructure
+::marker == $0  UserAuthInfrastructure
