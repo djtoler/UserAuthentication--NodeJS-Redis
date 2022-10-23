@@ -1,6 +1,6 @@
-|Project Features|Project Documentation Tabe Of Contents|
-|:-:|:-:|
-|![First Image](https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG)|[Second Image](https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG)|
+|First Image|
+|:-:|
+|![First Image](https://loginregistrationapp.s3.amazonaws.com/dfefewf.PNG)|
 
 - [Heading](#heading)
   * [Sub-heading](#sub-heading)
