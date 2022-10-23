@@ -1,3 +1,62 @@
+|Project Features|Project Documentation Tabe Of Contents|
+|:-:|:-:|
+|![First Image](https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG)|[Second Image](https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG)|
+
+- [Heading](#heading)
+  * [Sub-heading](#sub-heading)
+    + [Sub-sub-heading](#sub-sub-heading)
+- [Heading](#heading-1)
+  * [Sub-heading](#sub-heading-1)
+    + [Sub-sub-heading](#sub-sub-heading-1)
+- [Heading](#heading-2)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
+# Heading levels
+
+> This is a fixture to test heading levels
+
+<!-- toc -->
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+## Heading
+
+This is an h1 heading
+
+### Sub-heading
+
+This is an h2 heading
+
+#### Sub-sub-heading
+
+This is an h3 heading
+
+<p align="right"><img src="https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG" alt="Alt text" title="Optional title"></p>some text floating around the image
+
+<br clear="right"/>
+
 ###### <sub>The main intention of this application is to build a scalable user Register/Login and capture data for analytics.</sub> 
 ###### <sub>At a high-level view, the arcitecture/design consists of 2 parts. **_The User Interface and Handling User Data_** </sub>
 
@@ -120,7 +179,6 @@
 
 # 2. Designing The Arcitecture
 
-
 ##### Infrastructure Level 
 
             Build a private network. Use 2 subnets, 1 to house the application and 1 to house the cache engine cluster
@@ -133,6 +191,8 @@
 ##### ***Data level***  
             
             Build a cache layer around the database layer
+
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/InfrastructreDiagram.jpg" alt="Alt text" title="Optional title"></p>
 
 # 3. Formulating Stratagies & Selecting The Tools
 
