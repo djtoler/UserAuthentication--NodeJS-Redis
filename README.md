@@ -275,7 +275,7 @@
                                                 unless a user has a specific token attached to that data
                                                 
     			            SSL: Encrypt data to make data unavailable as it travels from source to destination
-# Building The Application
+# 4. Building The Application
 
     * Started with TTD in the business logic layer
     * Wrote out users data flow and return values, step by step
@@ -287,9 +287,9 @@
     * Select an EC2 instance type and configurations to deploy application on
     * Select capacity and configuration for the Redis cache node cluster 
 
-# Evaluating The Application
+# 5. Evaluating The Application
 
-# Alternative Architectures
+# 6. Alternative Architectures
 
 Implementation
 Architecture
