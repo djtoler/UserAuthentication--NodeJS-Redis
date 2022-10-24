@@ -32,23 +32,23 @@
   * [Data Level](#data-level-1)
    
 - [4. Building The Application](#4-building-the-application)
-  * [Testing using TDD ](#testing--ttd)
+  * [Testing (using TDD) ](#testing--ttd)
     + [Registration / Login Tests](#testing--ttd)
     + [Load Tests](#testing--ttd)
-  * [Application & Business Logic Layers using Clean Coding Principals ](#application--business-logic-layers)
+  * [Application & Business Logic Layers (using Clean Coding Principals) ](#application--business-logic-layers)
     + [API Routes](#application--business-logic-layers)
     + [User Data Flow](#application--business-logic-layers)
-  * [Infastructure Layer using IaC ](#infastructure-layer)
+  * [Infastructure Layer (using Infastructure as Code (iaC)) ](#infastructure-layer)
     + [Private Cloud Network & Subnets (VPC)](#infastructure-layer)
     + [Virtual Machines (EC2)](#infastructure-layer)
-  * [Data Layer using Clean Coding Principals ](#data-layer)
+  * [Data Layer using (Clean Coding Principals) ](#data-layer)
     + [MongoDB (with Dependency Injection)](#data-layer)
     + [DynamoDB (with SOLID principles)](#data-layer)
     + [Cache Engine (Redis)](#data-layer)
    
 - [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
-  * [Alternative Architecture #1](#sub-heading-2)
-  * [Alternative Architecture #2](#sub-heading-2)
+  * [Alternative Architecture #1 - Serverless](#sub-heading-2)
+  * [Alternative Architecture #2 - GCP](#sub-heading-2)
   * [Post Build Evaluation](#sub-heading-2)
     
 
@@ -387,8 +387,9 @@
 |![Modularize Functionality](https://loginregistrationapp.s3.amazonaws.com/tablebuilder.PNG)|![Intention Revealing Naming Conventions](https://loginregistrationapp.s3.amazonaws.com/sendtoawstable.PNG)|
 
     * Select capacity and configuration for the Redis cache node cluster 
-<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/redisclusterconnection.PNG" alt="Alt text" title="Optional title"></p>
 <p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logincachecluster.PNG" alt="Alt text" title="Optional title"></p>
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/redisclusterconnection.PNG" alt="Alt text" title="Optional title"></p>
+
 
 # 5. Alternative Architectures and Evaluating The Application
     * AWS API Gateway, Lambdas, DynamoDB with DAX Accelerator for caching and SNS for triggering events for analytics
