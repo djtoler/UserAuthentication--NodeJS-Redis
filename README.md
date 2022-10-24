@@ -1,64 +1,27 @@
-|First Image|
-|:-:|
-|![First Image](https://loginregistrationapp.s3.amazonaws.com/dfefewf.PNG)|
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/loginheader.PNG" alt="Alt text" title="Optional title"></p>
 
-- [Heading](#heading)
+|Tools Used and Features|
+|:-:|
+|![First Image](https://loginregistrationapp.s3.amazonaws.com/loginghmk.PNG)|
+
+- [1. Planning the Design](#1-planning-the-design)
   * [Sub-heading](#sub-heading)
     + [Sub-sub-heading](#sub-sub-heading)
-- [Heading](#heading-1)
+- [2. Designing The Arcitecture](#2-designing-the-arcitecture)
   * [Sub-heading](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
-- [Heading](#heading-2)
+- [3. Formulating Stratagies And Selecting The Tools](#3-formulating-stratagies-and-selecting-the-tools)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
-# Heading levels
+- [4. Building The Application](#4-building-the-application)
+  * [Sub-heading](#sub-heading-1)
+    + [Sub-sub-heading](#sub-sub-heading-1)
+- [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
+  * [Sub-heading](#sub-heading-2)
+    + [Sub-sub-heading](#sub-sub-heading-2)
 
-> This is a fixture to test heading levels
-
-<!-- toc -->
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-## Heading
-
-This is an h1 heading
-
-### Sub-heading
-
-This is an h2 heading
-
-#### Sub-sub-heading
-
-This is an h3 heading
-
-<p align="right"><img src="https://loginregistrationapp.s3.amazonaws.com/LoginInfoGraphic.PNG" alt="Alt text" title="Optional title"></p>some text floating around the image
-
-<br clear="right"/>
-
-###### <sub>The main intention of this application is to build a scalable user Register/Login and capture data for analytics.</sub> 
-###### <sub>At a high-level view, the arcitecture/design consists of 2 parts. **_The User Interface and Handling User Data_** </sub>
+#### <sub>The main intention of this application is to build a scalable user Register/Login and capture data for analytics.</sub> 
+#### <sub>At a high-level view, the arcitecture/design consists of 2 parts. **_The User Interface and Handling User Data_** </sub>
 
 # 1. Planning the Design
 
@@ -194,7 +157,7 @@ This is an h3 heading
 
 <p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/InfrastructreDiagram.jpg" alt="Alt text" title="Optional title"></p>
 
-# 3. Formulating Stratagies & Selecting The Tools
+# 3. Formulating Stratagies And Selecting The Tools
 
 - Infrastructure level
 
@@ -347,18 +310,6 @@ This is an h3 heading
     * Select an EC2 instance type and configurations to deploy application on
     * Select capacity and configuration for the Redis cache node cluster 
 
-# 5. Evaluating The Application
+# 5. Alternative Architectures and Evaluating The Application
 
-# 6. Alternative Architectures
-
-Implementation
-Architecture
-Alternative Architectures
-Security
-Monitoring
-https://grafana.com/
-Testability
-Deployability
-Vercel
-Glossary
 
