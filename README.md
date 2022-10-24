@@ -6,15 +6,25 @@
 
 - [1. Planning the Design](#1-planning-the-design)
   * [Database](#database---to-organize-and-retrieve-user-data)
-    + [Sub-sub-heading](#sub-sub-heading)
+  * [Data Storage](#data-storage---a-data-storage-for-logs-and-backup-files)
+  * [Data Attributes](#data-attributes---documenting-attributes-of-the-data-to-be-handled)
+  * [Reliability](#reliability---plan-for-how-to-designarcitect-the-app-to-be-highly-reliable)
+  * [Performance](#performance---plan-for-building-the-application-to-perform-optimally)
+  * [Security](#security---plan-for-how-i-can-secure-the-application-at-all-3-levels)
+  * [Risk Matrix](#riskmatrix---plan-for-how-to-mitigate-risk-for-mission-critical-components-of-the-application)
+
 - [2. Designing The Arcitecture](#2-designing-the-arcitecture)
-  * [Sub-heading](#sub-heading-1)
-    + [Sub-sub-heading](#sub-sub-heading-1)
+  * [Infrastructure Level](#infrastructure-level)
+  * [Application Level](#application-level)
+  * [Data Level](#data-level)
+ 
 - [3. Formulating Stratagies And Selecting The Tools](#3-formulating-stratagies-and-selecting-the-tools)
-  * [Sub-heading](#sub-heading-2)
+  * [Infrastructure Level](#infrastructure-level-1)
+  * [Application Level](#application-level-1)
+  * [Data Level](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [4. Building The Application](#4-building-the-application)
-  * [Sub-heading](#sub-heading-1)
+  * [Data Level](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
   * [Sub-heading](#sub-heading-2)
@@ -213,94 +223,102 @@
 ### Application level
 
 ##### Programming Language:
+
     		1. I'll need a languange that has SDKs for cloud providers.
+      
     		2. Due to time constraints, the application has to be built using a framework that either 
-    		            fimilar or easy to learn.
+      fimilar or easy to learn.
+      
     		3. The programming language should be oriented to simple application builds
+      
     		4. The programming language should have a well established community behind 
-    		            it to make problem solving research fast and efficient
-    		I'll choose between Python and Nodejs and select NodeJS becaused I can write the frontend and 
-                        backend in the same language, less resource management and fimiliarity
+      it to make problem solving research fast and efficient
+      
+    		I'll choose between Python and Nodejs and select NodeJS becaused I can write the frontend 
+      and backend in the same language, less resource management and fimiliarity
                         
     		**Python may still be used later on for analytics and bot testing purposes
 
-    	Presentation Layer: 
+##### Presentation Layer: 
             
-    		OBJECTIVE: Quickly design a basic and flexible UI with modern look that serves content fast
+     OBJECTIVE: Quickly design a basic and flexible UI with modern look that serves content fast
                         
-    		STRATEGY: Choose a framework for designing UI components to give a modren look. A framework 
-                        will speed up code delivery becuse of prebuilt components and wont have to sacrafice not 
-                        having the quality of a modern looking app
+     STRATEGY: Choose a framework for designing UI components to give a modren look. A framework 
+     will speed up code delivery becuse of prebuilt components and wont have to sacrafice not 
+     having the quality of a modern looking app
                         
-    		TOOLS:  
-                        
-                         1.---> React with ChakraUI = React combines HTML, CSS & JS into one reducing time needed 
-                         to program while still solving for the modern look objective. React community 
-                         is also big so if theres trouble with UI, finding a solution shouldnt be difficult
-                                    
-    		            2.---> Cloudinary = Serves static content faster than reaching to a database solving for 
-    		            the delivery speed objective
+     TOOLS:
+     
+     1.---> React with ChakraUI = React combines HTML, CSS & JS into one reducing time needed to 
+     program while still solving for the modern look objective. React community is also big so 
+     if theres trouble with UI, finding a solution shouldnt be difficult
+     
+     2.---> Cloudinary = Serves static content faster than reaching to a database solving for the 
+     delivery speed objective
 
-    	Application & Business Logic Layer
+##### Application & Business Logic Layer
             
-    		OBJECTIVE: Program the code in a layered, flexible way to allow for easy rapid changes in code because 
-                        things will constantly change with the app for the first few months after deployment
+     OBJECTIVE: Program the code in a layered, flexible way to allow for easy rapid changes in code 
+     because things will constantly change with the app for the first few months after deployment
                         
-    		STRATEGY: Use clean coding principals and dependency injection for application level resources 
-                        that can be swapped out based on use cases
+     STRATEGY: Use clean coding principals and dependency injection for application level resources 
+      that can be swapped out based on use cases
                         
-    		APPLICATION TOOLS:
-    			---> Express: Express has good I/O handling which makes a really good for a user auth app which 
-                                    will be a read/write heavy app. Express is used for quick deployment and has lots  of 
-                                    compatibility with Nodejs which reduces design complexity and time to code delivery
-                                    
-    			            **Alternatives**
-    			                        1. Serverless (a good alternative, especially for speed of deployment. 
-    			                        The only constraint this bring up is configuration fimiliary which would 
-                                                            slow down production speed but otherwise a extremly viable alternative)
-                                    
-    			                        2. Other Nodejs frameworks (not as much of a community available 
-    			                        for potential problem 
+     APPLICATION TOOLS:
+      
+      ---> Express: Express has good I/O handling which makes a really good for a user auth app which 
+      will be a read/write heavy app. Express is used for quick deployment and has lots of compatibility 
+      with Nodejs which reduces design complexity and time to code delivery
+      
+        **Alternatives**
+      
+         1. Serverless (a good alternative, especially for speed of deployment. The only constraint this 
+         bring up is configuration fimiliary which would slow down production speed but otherwise a extremly 
+       viable alternative)
+       
+         2. Other Nodejs frameworks (not as much of a community available for potential problems/troubleshooting 
+         atp, time is too sensitive plus theres no easily identifiable solution they'd provide for this 
+         particular business case)
     			
-                                                   3. solving and theres no easily identifiable solution it provides 
-                                                            for this particular business case)
-    			
-                     ---> CORS & Body-Parser: Help with data moving between the presentation layer and the application layer
-    			
-                     ---> dotenv: Help with storing enviornment variables
+      ---> CORS & Body-Parser: Help with data moving between the presentation layer and the application layer
+    		---> dotenv: Help with storing enviornment variables
     		
-              BUSINESS LOGIC TOOLS:
-                  
-    			JSON Web Token, UUID & Cryptr = for Authenticating users and storing users data.
-                                    
-    			Cloudinary = Cloudinary is used for 3 reasons.
+     BUSINESS LOGIC TOOLS:
+      
+      ---> JSON Web Token, UUID & Cryptr = for Authenticating users and storing users data.
+      ---> Cloudinary = Cloudinary is used for 3 reasons.
+      
     				1. It allows for image manipulation that can be done on the front end during the profile pictyure upload.
-    				2. In this application, its already used to serve static content so using it here will reduce the complexity of resource utilization and managemnt, Ill use cloudinary to store user profile images.
+        
+    				2. In this application, its already used to serve static content so using it here will reduce the complexity 
+        of resource utilization and managemnt, Ill use cloudinary to store user profile images.
+        
     				3. It will also allow for user profile pictures to be rendered fast due to the nature of a global CDN
     				
-    	            SECURITY: Rate limit at the API at tthe application layer
+    	 SECURITY: Rate limit at the API at tthe application layer
 
-- Data Level
-    	Cache Layer & Databse Layer
-            
-    			OBJECTIVE: I want to build scalable program that makes user data highly available and 
-                                    serves data fast since the entire business case of this app depends on the storage and 
-                                    retrival of data
+##### Data Level
+
+    Cache Layer & Databse Layer
+    
+     OBJECTIVE: I want to build scalable program that makes user data highly available and serves data 
+     fast since the entire business case of this app depends on the storage and retrival of data
                                     
-    			STRATEGY: Build and design and caching layer over the database since the app heavily 
-                                    relies on reading and writing. Build in fault tolerance at the database layer.
+     STRATEGY: Build and design and caching layer over the database since the app heavily relies on reading 
+     and writing. Build in fault tolerance at the database layer.
                                     
-    			CACHE LAYER TOOLS: Redis cluster thats highly available and can serve user data fast 
-                                    while protecting the database. Remove some of the management of the cluster by using 
-                                    AWS Elasticache
+     CACHE LAYER TOOLS: Redis cluster thats highly available and can serve user data fast while protecting 
+     the database. Remove some of the management of the cluster by using AWS Elasticache
                                     
-    			DATABASE LAYER TOOLS: MongoDB & DynamoDB
+     DATABASE LAYER TOOLS: MongoDB & DynamoDB
                                     
-    		        SECURITY: 
-    			            Tokens: Tokenize data at the business logic layer rest making the data unavailable 
-                                                unless a user has a specific token attached to that data
-                                                
-    			            SSL: Encrypt data to make data unavailable as it travels from source to destination
+     SECURITY:
+     
+       Tokens: Tokenize data at the business logic layer rest making the data unavailable unless a user has 
+       a specific token attached to that data
+       
+       SSL: Encrypt data to make data unavailable as it travels from source to destination
+       
 # 4. Building The Application
 
     * Started with TTD in the business logic layer
