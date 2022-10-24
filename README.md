@@ -5,7 +5,7 @@
 |![First Image](https://loginregistrationapp.s3.amazonaws.com/loginghmk.PNG)|
 
 - [1. Planning the Design](#1-planning-the-design)
-  * [Sub-heading](#sub-heading)
+  * [Database](#database---to-organize-and-retrieve-user-data)
     + [Sub-sub-heading](#sub-sub-heading)
 - [2. Designing The Arcitecture](#2-designing-the-arcitecture)
   * [Sub-heading](#sub-heading-1)
@@ -26,14 +26,14 @@
 # 1. Planning the Design
 
 ### **MoSCoW**
-#### <sub>For planning the design/implementation, I decided to use the MoSCoW prioritization method. With this method, I will prioritize resources, infastructure, components and functionality that the project **_Must Have, Should Have, Could Have & Wont Have_** </sub>
+- #### <sub>For planning the design/implementation, I decided to use the MoSCoW prioritization method. With this method, I will prioritize resources, infastructure, components and functionality that the project **_Must Have, Should Have, Could Have & Wont Have_** </sub>
 
 ### <ins> _**A) Must Haves**_</ins>
 ##### ***FUNCTIONAL Requirements*** 
-###### _***User Interface***_ - User must be able to enter credentials. Successful user data input must redirect users accordingly. Non-successful user data input must automatically respond with erreor messaging
+- ###### _***User Interface***_ - User must be able to enter credentials. Successful user data input must redirect users accordingly. Non-successful user data input must automatically respond with erreor messaging
 ##### ***NON-FUNCTIONAL Requirements*** 
-###### _***Data Handling***_ - System must be able to store and rapidly retrieve user data
-- Database - To organize and retrieve user data
+- ###### _***Data Handling***_ - System must be able to store and rapidly retrieve user data
+### Database - To organize and retrieve user data
                                 
             A business case that might require rigid data consistency vs a business case that might 
             require data flexibility is the deciding factor that I ended up at. I think it would be 
@@ -56,7 +56,7 @@
                     data shape is more predictable. Unless the application is kept as a decoupled independent 
                     component of the backend.
                     
-- Data Storage - A data storage for logs and backup files
+### Data Storage - A data storage for logs and backup files
 
                         Backup files should have a lower latency but log files can wait a bit
                         
@@ -66,15 +66,17 @@
 
 ### <ins> _**B) Should Haves**_</ins>
 ##### ***FUNCTIONAL Requirements*** 
-###### _***User Interface***_ - Presentation should convey credibility & presentation should have a relativly modern look 
+- ###### _***User Interface***_ - Presentation should convey credibility & presentation should have a relativly modern look
+ 
             1. Implement Facebook or Google
             2. Use pre-built UI omponents
-###### _***Data Handling***_ - System should capture data for analytics 
+- ###### _***Data Handling***_ - System should capture data for analytics
+ 
             1. Log data from using a event driven approach
 ##### ***NON-FUNCTIONAL Requirements*** 
-###### _***Data Handling***_ - System should be optimized for performance and resource allocation.
+- ###### _***Data Handling***_ - System should be optimized for performance and resource allocation.
 
-- Data Attributes - Documenting attributes of the data to be handled
+### Data Attributes - Documenting attributes of the data to be handled
 
             1. Data Types ---> Application will consist of User Data & Analytics Data
             2. Data Temperatures --->  Login = HOT, Registration = N/A, Analytics = WARM/HOT
@@ -87,7 +89,7 @@
       	3. Data Access Patterns ---> Find a users profile[GET/READ], Create a user profile [POST/CREATE], 
       	            Update a user data[PUT/UPDATE]
 
-- Reliability - Plan for how to design/arcitect the app to be highly reliable
+### Reliability - Plan for how to design/arcitect the app to be highly reliable
 
     			1. Recoverability - For recoverability, I will backup data and files in AWS S3 and program scripts for potential mission critical application component failures
     				---> Application Level: write script for login failure, cache misses
@@ -116,19 +118,19 @@
     			8. Portability - For portability, I will build the app so that it can easily be ran on different platforms
     				---> Consider using Docker to containerization the application
 
-- Performance - Plan for building the application to perform optimally
+### Performance - Plan for building the application to perform optimally
  
             Caching:---> For the login feature, use caching for faster data retrival
             CDN:---> Serve static files in the presentation layer from a CDN
             Load Balancing:---> For the both the login and registration, decided at what layer to balance the application load 
 
-- Security - Plan for how I can secure the application at all 3 levels
+### Security - Plan for how I can secure the application at all 3 levels
              
              Application Level:---> Authentication and Authorization for users, API rate limiting
              Data Level:---> Use private subnets with gatweays, encrypt data at rest and in transit
              Infastructure Level:---> VPC with NAT and Internet gateways
 
-- RiskMatrix - Plan for how to mitigate risk for mission critical components of the application
+### RiskMatrix - Plan for how to mitigate risk for mission critical components of the application
 <p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/loginriskmatrix.PNG" alt="Alt text" title="Optional title"></p>
 
     	Login/Register:
@@ -160,7 +162,7 @@
 
 # 3. Formulating Stratagies And Selecting The Tools
 
-- Infrastructure level
+### Infrastructure level
 
     	OBJECTIVE: Reliable infastructure, rapid building and deployment while being as cost efficent as possbbile
             
@@ -208,9 +210,9 @@
     		Nat Gateway = Allow only 1 way communication between data resources and public 
                         internet. Public internet will communicate with NAT Gateway only
 
-- Application level
+### Application level
 
-    	Programming Language:
+##### Programming Language:
     		1. I'll need a languange that has SDKs for cloud providers.
     		2. Due to time constraints, the application has to be built using a framework that either 
     		            fimilar or easy to learn.
