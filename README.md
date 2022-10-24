@@ -350,7 +350,7 @@
     * Load testing with AutoCannon
 |AutoCannon Load Test Script|AutoCannon Data Model for Analytics|
 |:-:|:-:|
-|![AutoCannon Load Test Script](https://loginregistrationapp.s3.amazonaws.com/loginloasttest.PNG)|![AutoCannon Data Model for Analytics](https://loginregistrationapp.s3.amazonaws.com/autcannon1.PNG)|
+|![AutoCannon Load Test Script](https://loginregistrationapp.s3.amazonaws.com/autcannon1.PNG)|![AutoCannon Data Model for Analytics](https://loginregistrationapp.s3.amazonaws.com/loginloasttest.PNG)|
 
 |Registration Test Snippet|Login Test Snippet|
 |:-:|:-:|
