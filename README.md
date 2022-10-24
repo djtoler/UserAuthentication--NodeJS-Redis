@@ -24,7 +24,10 @@
   * [Data Level](#data-level-1)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [4. Building The Application](#4-building-the-application)
-  * [Testing/TDD ](#sub-heading-1)
+  * [Testing/TDD ](#testing--ttd)
+  * [Application & Business Logic Layers ](#application--business-logic-layers)
+  * [Infastructure Layer ](#infastructure-layer)
+  * [Data Layer ](#testing--ttd)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
   * [Sub-heading](#sub-heading-2)
@@ -334,6 +337,11 @@
 ##### Infastructure Layer
     * Select VPC and subnet configurations
     * Select an EC2 instance type and configurations to deploy application on
+    * Select capacity and configuration for the Redis cache node cluster 
+    
+##### Data Layer
+    * MongoDB & DynamoDB configurations
+    * Redis configurations
     * Select capacity and configuration for the Redis cache node cluster 
 
 # 5. Alternative Architectures and Evaluating The Application
