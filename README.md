@@ -368,7 +368,6 @@
 |Registration Test Snippet|Login Test Snippet|
 |:-:|:-:|
 |![Registration Test Snippet](https://loginregistrationapp.s3.amazonaws.com/registrationtests.PNG)|![Login Test Snippet](https://loginregistrationapp.s3.amazonaws.com/logintest.PNG)|
-<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logininfrastructureterraform.PNG" alt="Alt text" title="Optional title"></p>
     
 ##### Application & Business Logic Layers
     * Transfer the test case logic into components of a function
