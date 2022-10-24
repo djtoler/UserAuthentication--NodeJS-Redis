@@ -24,7 +24,7 @@
   * [Data Level](#data-level-1)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [4. Building The Application](#4-building-the-application)
-  * [Data Level](#sub-heading-1)
+  * [Testing/TDD ](#sub-heading-1)
     + [Sub-sub-heading](#sub-sub-heading-1)
 - [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
   * [Sub-heading](#sub-heading-2)
@@ -321,16 +321,23 @@
        
 # 4. Building The Application
 
+##### Testing / TTD
     * Started with TTD in the business logic layer
     * Wrote out users data flow and return values, step by step
     * Built test cases for each step in the user flow
+    
+##### Application & Business Logic Layers
     * Transfer the test case logic into components of a function
     * Build out the the components into single-responsibility functions that return data that can be used in the next logical step of process
     * Combine those functions to work together produce a desired outcome
+    
+##### Infastructure Layer
     * Select VPC and subnet configurations
     * Select an EC2 instance type and configurations to deploy application on
     * Select capacity and configuration for the Redis cache node cluster 
 
 # 5. Alternative Architectures and Evaluating The Application
+    * AWS API Gateway, Lambdas, DynamoDB with DAX Accelerator for caching and SNS for triggering events for analytics
+    * Google Cloud Functions, NextJS, Vercel
 
 
