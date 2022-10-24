@@ -379,15 +379,15 @@
 |Abstracting Away The Database...|By Using Dependency Injection|
 |:-:|:-:|
 |![Abstracting Away The Database...](https://loginregistrationapp.s3.amazonaws.com/cleancodelogin.PNG)|![By Using Dependency Injection](https://loginregistrationapp.s3.amazonaws.com/mongodbcode.PNG)|
-|Abstracting Away The Database...|By Using Dependency Injection|
+|Builder Pattern|SOLID: Single Responsibility Functions|
 |:-:|:-:|
 |![Builder Pattern](https://loginregistrationapp.s3.amazonaws.com/frame.PNG)|![SOLID: Single Responsibility Functions](https://loginregistrationapp.s3.amazonaws.com/Functioncomponents.PNG)|
-|Abstracting Away The Database...|By Using Dependency Injection|
+|Modularize Functionality|Intention Revealing Naming Conventions|
 |:-:|:-:|
-|![Modularize Functionality](https://loginregistrationapp.s3.amazonaws.com/tablebuilder.PNG)|![Intention Revealing Naaming Conventions](https://loginregistrationapp.s3.amazonaws.com/sendtoawstable.PNG)|
+|![Modularize Functionality](https://loginregistrationapp.s3.amazonaws.com/tablebuilder.PNG)|![Intention Revealing Naming Conventions](https://loginregistrationapp.s3.amazonaws.com/sendtoawstable.PNG)|
 
     * Select capacity and configuration for the Redis cache node cluster 
-<p align="center"><img src="https://https://loginregistrationapp.s3.amazonaws.com/redisclusterconnection.PNG" alt="Alt text" title="Optional title"></p>
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/redisclusterconnection.PNG" alt="Alt text" title="Optional title"></p>
 <p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logincachecluster.PNG" alt="Alt text" title="Optional title"></p>
 
 # 5. Alternative Architectures and Evaluating The Application
