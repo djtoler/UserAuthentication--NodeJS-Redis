@@ -21,7 +21,7 @@
 - [3. Formulating Stratagies And Selecting The Tools](#3-formulating-stratagies-and-selecting-the-tools)
   * [Infrastructure Level](#infrastructure-level-1)
   * [Application Level](#application-level-1)
-  * [Data Level](#sub-heading-1)
+  * [Data Level](#data-level-1)
     + [Sub-sub-heading](#sub-sub-heading-2)
 - [4. Building The Application](#4-building-the-application)
   * [Data Level](#sub-heading-1)
@@ -247,7 +247,7 @@
      will speed up code delivery becuse of prebuilt components and wont have to sacrafice not 
      having the quality of a modern looking app
                         
-     TOOLS:
+###### TOOLS:
      
      1.---> React with ChakraUI = React combines HTML, CSS & JS into one reducing time needed to 
      program while still solving for the modern look objective. React community is also big so 
@@ -264,7 +264,7 @@
      STRATEGY: Use clean coding principals and dependency injection for application level resources 
       that can be swapped out based on use cases
                         
-     APPLICATION TOOLS:
+###### APPLICATION TOOLS:
       
       ---> Express: Express has good I/O handling which makes a really good for a user auth app which 
       will be a read/write heavy app. Express is used for quick deployment and has lots of compatibility 
@@ -283,7 +283,7 @@
       ---> CORS & Body-Parser: Help with data moving between the presentation layer and the application layer
     		---> dotenv: Help with storing enviornment variables
     		
-     BUSINESS LOGIC TOOLS:
+###### BUSINESS LOGIC TOOLS:
       
       ---> JSON Web Token, UUID & Cryptr = for Authenticating users and storing users data.
       ---> Cloudinary = Cloudinary is used for 3 reasons.
@@ -299,7 +299,7 @@
 
 ##### Data Level
 
-    Cache Layer & Databse Layer
+###### Cache Layer & Databse Layer
     
      OBJECTIVE: I want to build scalable program that makes user data highly available and serves data 
      fast since the entire business case of this app depends on the storage and retrival of data
