@@ -123,31 +123,44 @@
 
 ### Reliability - Plan for how to design/arcitect the app to be highly reliable
 
-    			1. Recoverability - For recoverability, I will backup data and files in AWS S3 and program scripts for potential mission critical application component failures
+    1. Recoverability - For recoverability, I will backup data and files in AWS S3 and program scripts 
+    for potential mission critical application component failures
     				---> Application Level: write script for login failure, cache misses
     				---> Data Level: create and store backup files in s3
     				---> Infastructure Level: implement health checks
 
-    			2. Availability - For availability, I will deploy the application on multiple virtual machines that failover/balance to multiple locations
+    2. Availability - For availability, I will deploy the application on multiple virtual machines 
+    that failover/balance to multiple locations
     				---> Distribute traffic using a Load Balancer
     				---> Distribute traffic to other regions using DNS Active Passive Failover
 
-    			3. Extensibility - For extensibility, I will build/design to make important components flexible and allow for services to be decoupled . This is why I initially came up with the idea for thi application.
+    3. Extensibility - For extensibility, I will build/design to make important components flexible 
+    and allow for services to be decoupled . This is why I initially came up with the idea for this 
+    application.
     				---> Use clean coding, dependeency injection and design a using a loosly coupled arcitecture
 
-    			4. Scalability - For scalability, I will build for a performant user experience that accomidateds a user/server usage bursts
-    				---> Use automated horizontial scaling. This will allow me to have the capacity necessary when the application requires it while simultaniously optimizing for cost and resource allocation by automatically scaling down when the application doesnt need it.
+    4. Scalability - For scalability, I will build for a performant user experience that accomidateds 
+    a user/server usage bursts
+    				---> Use automated horizontial scaling. This will allow me to have the capacity necessary when 
+        the application requires it while simultaniously optimizing for cost and resource allocation by 
+        automatically scaling down when the application doesnt need it.
 
-    			5. Maintainability - For maintainability, I will initially build a small CICD pipeline to maintain application logic and infrastructure
-    				---> Use Github for version control, Terraform for infastructure deployment. Maybe Jenkins for coordinating the jobs as the workloads increase and become more comprehnsive & Ansible for managing the servers as the virtial machine count scales out
+    5. Maintainability - For maintainability, I will initially build a small CICD pipeline to maintain 
+    application logic and infrastructure
+    				---> Use Github for version control, Terraform for infastructure deployment. Maybe Jenkins for coordinating 
+        the jobs as the workloads increase and become more comprehnsive & Ansible for managing the servers as 
+        the virtial machine count scales out
+        
+    6. Testability - For testability, I will test for load capacity, scalability, functionality.
+        ---> Use AutoCannon for testing load capacity, replicate Python bots to test for scalability, 
+        use Jest for functionality testing and Postman for route testing
 
-                      6. Testability - For testability, I will test for load capacity, scalability, functionality.
-                                ---> Use AutoCannon for testing load capacity, replicate Python bots to test for scalability, use Jest for functionality testing and Postman for route testing
+    7. Useability - For usability, I will build the app to accomadate different user contexts
+    				---> Use HTTP Client Hints request headers to program scripts based of a users device 
+        compatibility and internet connectivity
 
-    			7. Useability - For usability, I will build the app to accomadate different user contexts
-    				---> Use HTTP Client Hints request headers to program scripts based of a users device compatibility and internet connectivity
-
-    			8. Portability - For portability, I will build the app so that it can easily be ran on different platforms
+    8. Portability - For portability, I will build the app so that it can easily be ran on different 
+       platforms
     				---> Consider using Docker to containerization the application
 
 ### Performance - Plan for building the application to perform optimally
