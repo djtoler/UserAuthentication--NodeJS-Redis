@@ -33,8 +33,8 @@
    
 - [4. Building The Application](#4-building-the-application)
   * [Testing (using TDD) ](#testing--ttd)
-    + [Registration / Login Tests](#testing--ttd)
     + [Load Tests](#testing--ttd)
+    + [Registration / Login Tests](#testing--ttd)
   * [Application & Business Logic Layers (using Clean Coding Principals) ](#application--business-logic-layers)
     + [API Routes](#application--business-logic-layers)
     + [User Data Flow](#application--business-logic-layers)
