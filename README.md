@@ -129,15 +129,16 @@
              Infastructure Level:---> VPC with NAT and Internet gateways
 
 - RiskMatrix - Plan for how to mitigate risk for mission critical components of the application
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/loginriskmatrix.PNG" alt="Alt text" title="Optional title"></p>
 
     	Login/Register:
     		Risk Value - 3A
     		Why - Will stop users from main purpose of application, will impact business
     		Plan - Solved with Avaliability at the infastructure/network level, failover methods at the database layer
     	
-        Analytics Data Capture:
-    		Risk Value - 3B
-    		Why - Will be hazardous to the business value but wont effect the top level/user purpose of the application
+           Analytics Data Capture:
+    	     	Risk Value - 3B
+    		     Why - Will be hazardous to the business value but wont effect the top level/user purpose of the application
                         Plan - Decouple the analytics components into an application and have the login/registration application send data to a seperate analytics application
 
 # 2. Designing The Arcitecture
