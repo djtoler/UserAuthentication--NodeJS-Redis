@@ -32,20 +32,19 @@
   * [Data Level](#data-level-1)
    
 - [4. Building The Application](#4-building-the-application)
-  * [Testing/TDD ](#testing--ttd)
-    + [Registration / Login Tests](#sub-sub-heading-1)
-    + [Load Tests](#sub-sub-heading-1)
-  * [Application & Business Logic Layers ](#application--business-logic-layers)
-    + [API Routes](#sub-sub-heading-1)
-    + [User Data Flow](#sub-sub-heading-1)
-  * [Infastructure Layer ](#infastructure-layer)
-    + [Private Cloud Network & Subnets (VPC)](#sub-sub-heading-1)
-    + [Virtual Machines (EC2)](#sub-sub-heading-1)
-    + [Cache Engine (Redis)](#sub-sub-heading-1)
-  * [Data Layer ](#data-layer)
-    + [MongoDB](#sub-sub-heading-1)
-    + [DynamoDB](#sub-sub-heading-1)
-    + [Redis](#sub-sub-heading-1)
+  * [Testing using TDD ](#testing--ttd)
+    + [Registration / Login Tests](#testing--ttd)
+    + [Load Tests](#testing--ttd)
+  * [Application & Business Logic Layers using Clean Coding Principals ](#application--business-logic-layers)
+    + [API Routes](#application--business-logic-layers)
+    + [User Data Flow](#application--business-logic-layers)
+  * [Infastructure Layer using IaC ](#infastructure-layer)
+    + [Private Cloud Network & Subnets (VPC)](#infastructure-layer)
+    + [Virtual Machines (EC2)](#infastructure-layer)
+  * [Data Layer using Clean Coding Principals ](#data-layer)
+    + [MongoDB (with Dependency Injection)](#data-layer)
+    + [DynamoDB (with SOLID principles)](#data-layer)
+    + [Cache Engine (Redis)](#data-layer)
    
 - [5. Alternative Architectures and Evaluating The Application](#5-alternative-architectures-and-evaluating-the-application)
   * [Alternative Architecture #1](#sub-heading-2)
@@ -348,21 +347,48 @@
     * Started with TTD in the business logic layer
     * Wrote out users data flow and return values, step by step
     * Built test cases for each step in the user flow
+    * Load testing with AutoCannon
+|AutoCannon Load Test Script|AutoCannon Data Model for Analytics|
+|:-:|:-:|
+|![AutoCannon Load Test Script](https://loginregistrationapp.s3.amazonaws.com/loginloasttest.PNG)|![AutoCannon Data Model for Analytics](https://loginregistrationapp.s3.amazonaws.com/autcannon1.PNG)|
+
+|Registration Test Snippet|Login Test Snippet|
+|:-:|:-:|
+|![Registration Test Snippet](https://loginregistrationapp.s3.amazonaws.com/registrationtests.PNG)|![Login Test Snippet](https://loginregistrationapp.s3.amazonaws.com/logintest.PNG)|
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logininfrastructureterraform.PNG" alt="Alt text" title="Optional title"></p>
     
 ##### Application & Business Logic Layers
     * Transfer the test case logic into components of a function
     * Build out the the components into single-responsibility functions that return data that can be used in the next logical step of process
     * Combine those functions to work together produce a desired outcome
+|API Path|API Routes|
+|:-:|:-:|
+|![API Path](https://loginregistrationapp.s3.amazonaws.com/api-path.PNG)|![API Routes](https://loginregistrationapp.s3.amazonaws.com/api-route.PNG)|
+|Registration Controller|Login Controller|
+|:-:|:-:|
+|![Registration Controller](https://loginregistrationapp.s3.amazonaws.com/registrationtests.PNG)|![Login Controller](https://loginregistrationapp.s3.amazonaws.com/registration-controller.PNG)|
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/userflow1.PNG" alt="Alt text" title="Optional title"></p>
     
 ##### Infastructure Layer
-    * Select VPC and subnet configurations
-    * Select an EC2 instance type and configurations to deploy application on
-    * Select capacity and configuration for the Redis cache node cluster 
+    * Select VPC and subnet configurations (using Terraform)
+    * Select an EC2 instance type and configurations to deploy application on (using Terraform)
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logininfrastructureterraform.PNG" alt="Alt text" title="Optional title"></p>
     
 ##### Data Layer
-    * MongoDB & DynamoDB configurations
-    * Redis configurations
+    * MongoDB using dependency injection & DynamoDB using the "Builder Pattern" w/ SOLID principles
+|Abstracting Away The Database...|By Using Dependency Injection|
+|:-:|:-:|
+|![Abstracting Away The Database...](https://loginregistrationapp.s3.amazonaws.com/cleancodelogin.PNG)|![By Using Dependency Injection](https://loginregistrationapp.s3.amazonaws.com/mongodbcode.PNG)|
+|Abstracting Away The Database...|By Using Dependency Injection|
+|:-:|:-:|
+|![Builder Pattern](https://loginregistrationapp.s3.amazonaws.com/frame.PNG)|![SOLID: Single Responsibility Functions](https://loginregistrationapp.s3.amazonaws.com/Functioncomponents.PNG)|
+|Abstracting Away The Database...|By Using Dependency Injection|
+|:-:|:-:|
+|![Modularize Functionality](https://loginregistrationapp.s3.amazonaws.com/tablebuilder.PNG)|![Intention Revealing Naaming Conventions](https://loginregistrationapp.s3.amazonaws.com/sendtoawstable.PNG)|
+
     * Select capacity and configuration for the Redis cache node cluster 
+<p align="center"><img src="https://https://loginregistrationapp.s3.amazonaws.com/redisclusterconnection.PNG" alt="Alt text" title="Optional title"></p>
+<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/logincachecluster.PNG" alt="Alt text" title="Optional title"></p>
 
 # 5. Alternative Architectures and Evaluating The Application
     * AWS API Gateway, Lambdas, DynamoDB with DAX Accelerator for caching and SNS for triggering events for analytics
