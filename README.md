@@ -1,8 +1,8 @@
-<p align="center"><img src="https://loginregistrationapp.s3.amazonaws.com/loginheader.PNG" alt="Alt text" title="Optional title"></p>
+<p align="center"><img src="https://github-assets-userauthapp.s3.amazonaws.com/loginheader.PNG" alt="Alt text" title="Optional title"></p>
 
 |Tools Used and Features|
 |:-:|
-|![First Image](https://loginregistrationapp.s3.amazonaws.com/loginghmk.PNG)|
+|![First Image](https://github-assets-userauthapp.s3.amazonaws.com/loginghmk.PNG)|
 
 - [1. Planning the Design](#1-planning-the-design)
   * [Database](#database---to-organize-and-retrieve-user-data)
