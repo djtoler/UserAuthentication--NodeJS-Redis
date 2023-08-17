@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github-assets-first-deployment.s3.amazonaws.com/1.1/user.pngG" alt="Alt text" title="Optional title"></p>
+<p align="center"><img src="https://github-assets-first-deployment.s3.amazonaws.com/1.1/user.png" alt="Alt text" title="Optional title"></p>
 
 |Tools Used and Features|
 |:-:|
